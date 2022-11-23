@@ -26,4 +26,6 @@ def get_dates_to_process(config_file_data):
 
 #function retrieve tables to be processed
 def get_tables_to_process (config_file_data):
-    return re.findall(r'\S+', config_file_data['tables']) 
+    return re.findall(r'\S+', config_file_data['tables'])
+
+
