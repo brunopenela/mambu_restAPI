@@ -24,8 +24,18 @@ def get_dates_to_process(config_file_data):
             dates_to_process.append(day_to_process) #append new date to the list
     return dates_to_process
 
-#function retrieve tables to be processed
+#function to retrieve tables to be processed
 def get_tables_to_process (config_file_data):
     return re.findall(r'\S+', config_file_data['tables'])
 
+#function to upload files in AWS with correct directory based on dates processed
+## desenvolver 2 formas de ficheiros, JSON bruto e JSON já flatten para modo estruturado 
+def put_object_in_bucket (s3,bucket_name,write_key,dates_to_process):
+    for date_process in dates_to_process:
+        parsed_date = date_process.split('-')
+        for parse in parsed_date:
+            year = parsed_date[0]
+            month = parsed_date[1]
+            day = parsed_date[2]   
+        s3.Object(bucket_name, write_key +year+'/'+month+'/'+day ).put(Body="TESTE")
 
