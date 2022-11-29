@@ -1,14 +1,14 @@
 import boto3
 import json
-from mambu_rest_api import get_config_file, get_dates_to_process,get_tables_to_process,put_object_in_bucket
+from aux_functions import get_config_file, get_dates_to_process,get_tables_to_process,put_object_in_bucket
 from datetime import datetime,date, timedelta
 import re
 #CONNECTION TO AWS CLIENT
 s3 = boto3.resource(
     service_name='s3',
     region_name='us-east-1',
-    aws_access_key_id='AKIA3DB37LF4OMETDK3G',
-    aws_secret_access_key='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')
+    aws_access_key_id='AKIA3DB37LF4CFIO34R6',
+    aws_secret_access_key='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')
 #DEFINE BUCKET AND KEY
 bucket = s3.Bucket("mambu-api-rd")
 bucket_name ="mambu-api-rd"
