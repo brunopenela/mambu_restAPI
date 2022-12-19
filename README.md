@@ -1,4 +1,7 @@
 # mambu_restAPI
-Objective: Tool that transfers data from certain tables into a third party storage . In this prototype, an s3 bucket was used as the final storage. 
-The was stored in the form of a json file and csv file.
-![image](https://user-images.githubusercontent.com/118446599/206739896-885cfe36-5a75-47ee-8330-403f2c254dcf.png)
+Deloitte has developed a snapshot data extraction asset based on REST API’s to accelerate extraction, storage and audit, and 
+file handling and delivery into the analytics / data transformation layer. 
+It emits API calls for any chosen table and date to any given location, in the following figure the destination of choice is an S3 bucket.
+![image](https://user-images.githubusercontent.com/118446599/208383881-8e015c7d-2a6b-440e-97f6-4c1ef9e0ab6d.png)
+
+
